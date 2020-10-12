@@ -26,9 +26,10 @@
 		<property name="hDbutility" ref="db"></property>
 	</bean>
 	
-	<bean id="sdb" class="com.hsbc.JdbcBackedDao"></bean>
+	<!-- <bean id="sdb" class="com.hsbc.JdbcBackedDao"></bean> -->
+	
 	<bean id="service" class="com.hsbc.AccountServiceImpl">
-		<property name="backedDao" ref="sdb"></property>
+		<property name="accountDao" ref="dao"></property>
 	</bean>
 
 </beans>

@@ -4,17 +4,21 @@ import java.util.List;
 
 public class AccountServiceImpl implements AccountService {
 
-	private JdbcBackedDao backedDao;
+	//Wrong Implementation
+	//private JdbcBackedDao backedDao;
 	
-	public void setBackedDao(JdbcBackedDao backedDao) {
-		this.backedDao = backedDao;
+	//correct Implementation
+	private AccountDao accountDao;
+	
+	public void setAccountDao(AccountDao accountDao) {
+		this.accountDao = accountDao;
 	}
-	
-	
+
+
 
 	public AccountServiceImpl() {
 		super();
-		System.out.println("Const of AccountServiceImpl");
+		System.out.println("Constructor of AccountServiceImpl");
 		// TODO Auto-generated constructor stub
 	}
 
