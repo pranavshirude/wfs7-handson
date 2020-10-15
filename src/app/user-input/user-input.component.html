@@ -1,0 +1,12 @@
+<div>
+    <h2>User Input Demo</h2>
+
+    <form>
+        Username : <input type="text" name="uname" autocomplete="off" 
+        [(ngModel)] = "username" #u><br>
+        Password : <input type="password" name = "upass" #p (input) = "enableButton(p.value)"><br>
+        <input type = "button" value="Press Me !" [disabled] = "isDisabled" (click)="handleButton(u.value, p.value)">
+    </form>
+    <p>Username : {{username}} <br> Password : {{password}}</p>
+    <input [(ngModel)] = "username" name="abc">
+</div>
